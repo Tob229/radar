@@ -10,6 +10,7 @@ from django.conf import settings
 
 
 urlpatterns = [
+    re_path(r'^', include('django_prometheus.urls')),
     re_path(
         r'^accounts/login/$',
         LoginView.as_view(template_name='login.html'),
